@@ -5,10 +5,11 @@
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
 .display {
-    background-color: #f2f2f2;
+    background-color: #e0e0e0;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -18,25 +19,61 @@
     width: 100%;
     border: none;
     background-color: transparent;
-    font-size: 24px;
+    font-size: 28px; /* Slightly larger font */
     text-align: right;
+    color: #333;
 }
 
 .keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
+    gap: 8px; /* Increased gap for better spacing */
 }
 
 .keys button {
     padding: 15px;
-    font-size: 18px;
+    font-size: 20px; /* Slightly larger font */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #eee;
+    background-color: #f0f0f0; /* Default button color */
+    color: #333;
+    transition: background-color 0.2s ease;
 }
 
 .keys button:hover {
-    background-color: #ddd;
+    background-color: #e0e0e0;
+}
+
+/* Specific styles for operators */
+.keys button:nth-child(4n), /* /, *, -, + */
+.keys button:nth-child(3) /* % */ {
+    background-color: #ff9500;
+    color: white;
+}
+
+.keys button:nth-child(4n):hover,
+.keys button:nth-child(3):hover {
+    background-color: #e08000;
+}
+
+/* Clear button */
+.keys button:nth-child(1) { /* C */
+    background-color: #d3d3d3;
+    color: #333;
+}
+
+.keys button:nth-child(1):hover {
+    background-color: #bfbfbf;
+}
+
+/* Equals button */
+.keys button:nth-child(19) { /* = */
+    background-color: #34c759;
+    color: white;
+    grid-column: span 2; /* Make equals button span two columns */
+}
+
+.keys button:nth-child(19):hover {
+    background-color: #2da44e;
 }
