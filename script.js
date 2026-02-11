@@ -7,7 +7,7 @@ function deleteLastChar() {
     document.getElementById('result').value = result.slice(0, -1);
 }
 
-function appendNumber(number) {.
+function appendNumber(number) {
     document.getElementById('result').value += number;
 }
 
